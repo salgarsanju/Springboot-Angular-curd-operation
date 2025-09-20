@@ -20,29 +20,35 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 
+	// doing crud operation in springboot
+	// create
 	@PostMapping("/save/employee")
 	public Employee saveEmployee(@RequestBody Employee employee) {
 		return employeeService.saveEmployee(employee);
 
 	}
 
+// get employee
 	@GetMapping("/get/employees")
 	public List<Employee> getEmployees() {
 		return employeeService.getEmployees();
 
 	}
 
+	// get employee by id
 	@GetMapping("/get/employee/{employeeId}")
 	public Employee getEmployeeById(@PathVariable Integer employeeId) {
 		return employeeService.getEmployeeById(employeeId);
 
 	}
+	// delete employee
 
 	@DeleteMapping("/delete/employee/{employeeId}")
 	public void deleteEmployee(@PathVariable Integer employeeId) {
 		employeeService.deleteEmployee(employeeId);
 	}
 
+	// updating employee
 	@PutMapping("/update/employee")
 	public Employee updateEmployee(@RequestBody Employee employee) {
 		return employeeService.updateEmployee(employee);
