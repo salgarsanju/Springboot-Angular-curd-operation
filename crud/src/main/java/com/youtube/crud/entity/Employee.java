@@ -12,6 +12,7 @@ import lombok.Data;
 @Table(name = "emptab")
 @Entity
 public class Employee {
+	// employee having this attribute
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer employeeId;
