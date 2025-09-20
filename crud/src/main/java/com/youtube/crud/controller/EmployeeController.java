@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.youtube.crud.dao.EmployeeDao;
 import com.youtube.crud.entity.Employee;
 import com.youtube.crud.service.EmployeeService;
-
+//controller class 
 @RestController
 public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
 
 	// doing crud operation in springboot
-	// create
+	// create new employee.
 	@PostMapping("/save/employee")
 	public Employee saveEmployee(@RequestBody Employee employee) {
 		return employeeService.saveEmployee(employee);
@@ -48,7 +48,7 @@ public class EmployeeController {
 		employeeService.deleteEmployee(employeeId);
 	}
 
-	// updating employee
+	// updating employee record
 	@PutMapping("/update/employee")
 	public Employee updateEmployee(@RequestBody Employee employee) {
 		return employeeService.updateEmployee(employee);
