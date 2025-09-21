@@ -15,10 +15,9 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeDao employeeDao;
 
+	// service layer saveEmployee
 	public Employee saveEmployee(Employee employee) {
 		return employeeDao.save(employee);
-
-		// TODO Auto-generated method stub
 
 	}
 
